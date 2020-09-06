@@ -1,4 +1,4 @@
-title:            zamerboy
+title:            lczxxx123
 description:      [^_^]
 disqus_shortname: 
 reading_time:     true
@@ -9,7 +9,7 @@ url: https://academician.ac.cn/
 
 # Owner/author information
 owner:
-  name:           zamerboy
+  name:           lczxxx123
   avatar:         avatar.jpg
   bio:            "nothing."
   email:          asecretqqmail@foxmail.com
@@ -35,7 +35,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Shanghai
 future:      false  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
