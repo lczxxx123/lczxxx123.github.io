@@ -72,7 +72,7 @@ $ sudo docker run hello-world
 
 ## 开写
 
-<img src='/assets/img/posts/微信截图_20200913223549.png' align='left' width = "100%" />
+<img src='/assets/img/posts/wxjt_20200913223549.png' align='left' width = "100%" />
 
 ### 找到一个靠谱的[代码](https://tianchi.aliyun.com/forum/postDetail?postId=96684)
 
