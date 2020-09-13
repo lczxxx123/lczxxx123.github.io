@@ -6,7 +6,7 @@ author: lczxxx123
 cover: '/assets/img/posts/IMG_3653.jpg'
 tags: jekyll
 ---
-
+<img src='/assets/img/posts/IMG_3653.jpg' align='center' width = "30%" />
 > 找了很久终于找到一个基本符合心理预期的 [kaeyleo/jekyll-theme-H2O](https://github.com/kaeyleo/jekyll-theme-H2O)
 
 > readme的步骤也算很清晰了
@@ -30,3 +30,6 @@ tags: jekyll
 {% endraw %}
 
 加上这个就行，就可以通过在页面头部加入header-img属性来添加头图,所以在jekyll中，page代表当前页面，页面的域var在最开头进行了定义，下面用两个花括号进行引用。
+
+## 汉字bug
+1. img的路径不能有汉字，不然会导致部分路径bug（大概是停止加载了）（哦不是，纯粹是网不好加载不出来）（文章中的好像会反复尝试加载，但是头图不会，那就把头图插到文章里吧）

@@ -6,7 +6,7 @@ author: lczxxx123
 cover: '/assets/img/posts/IMG_3537.jpg'
 tags: wx-miniprogram
 ---
-
+<img src='/assets/img/posts/IMG_3537.jpg' align='center' width = "30%" />
 > 感觉还是用官方的框架要稳一点 [官方文档](https://wepyjs.github.io/wepy-docs/)
 
 ### Welcome

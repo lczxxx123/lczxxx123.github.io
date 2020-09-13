@@ -6,7 +6,7 @@ author: lczxxx123
 cover: '/assets/img/posts/IMG_0505.jpg'
 tags: ML
 ---
-
+<img src='/assets/img/posts/IMG_0505.jpg' align='center' width = "30%" />
 > 感觉还是有个比赛会有动力点 [官网](https://tianchi.aliyun.com/)
 
 ## 入门
