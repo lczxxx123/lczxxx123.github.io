@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Hello tianchi'
+title: 'Tianchi docker'
 date: 2020-09-13
 author: lczxxx123
 cover: '/assets/img/posts/IMG_0505.jpg'
-tags: ML
+tags: ML tianchi docker
 ---
 <img src='/assets/img/posts/IMG_0505.jpg' align='center' width = "30%" />
 > 感觉还是有个比赛会有动力点 [官网](https://tianchi.aliyun.com/)
@@ -100,6 +100,7 @@ with open('result.json', 'w') as f:
 1. `docker image ls` 和 `docker ps -a` 看一下**image和容器**
 
 2. 要**删除**image需要 `docker stop 容器Id` + `docker rm 容器Id` + `docker image rm imageId` 
+
 3. 创建并**进入**容器去操作：
 `docker run -i -t imageId /bin/bash`
 
@@ -108,3 +109,20 @@ with open('result.json', 'w') as f:
 
 5. 修改完容器后**提交**为image
 `docker commit -m "upload python.py" 容器Id 仓库:版本号`
+
+6. **拷贝**东西：
+`docker cp xxx xxx`，docker地址为`容器Id:地址`
+
+### Dockerfile
+
+```bash
+FROM centos
+RUN yum install wget
+RUN wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz"
+RUN tar -xvf redis.tar.gz
+以上执行会创建 3 层镜像。可简化为以下格式：
+FROM centos
+RUN yum install wget \
+    && wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz" \
+    && tar -xvf redis.tar.gz
+```
