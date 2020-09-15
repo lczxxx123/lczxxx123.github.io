@@ -4,7 +4,7 @@ title: 'Tianchi first opencv'
 date: 2020-09-14
 author: lczxxx123
 cover: '/assets/img/posts/IMG_1479.jpg'
-tags: ML tianchi
+tags: ML tianchi opencv
 ---
 <img src='/assets/img/posts/IMG_1479.jpg' align='center' width = "30%" />
 
