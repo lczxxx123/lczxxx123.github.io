@@ -114,6 +114,7 @@ with open('result.json', 'w') as f:
 `docker cp xxx xxx`，docker地址为`容器Id:地址`
 
 ### Dockerfile
+RUN多个命令的时候记得用`&&` 或者`; `分割开命令
 
 ```bash
 FROM centos
