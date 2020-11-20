@@ -94,6 +94,10 @@ with open('result.json', 'w') as f:
 ```
 得学习一下pd的使用了，应该可以省掉很多事情
 
+### 提交
+<img src='/assets/img/posts/133cefac9fd9244db21d9ea5278bde2.png' align='left' width = "100%" />
+
+提交完成。生成入口脚本run.sh，放置于镜像工作目录。运行后生成结果result.json放置于工作目录（与run.sh同目录），评分系统将根据result.json进行打分。
 
 ### 好久没用docker了，借这个机会回忆了一下
 

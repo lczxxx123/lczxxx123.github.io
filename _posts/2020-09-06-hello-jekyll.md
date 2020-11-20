@@ -14,6 +14,8 @@ tags: jekyll
 ### Welcome
 
 希望一个月后这个网页没有荒废掉 🙄
+本地调试：jekyll server
+
 ### Note
 
 
@@ -30,6 +32,19 @@ tags: jekyll
 {% endraw %}
 
 加上这个就行，就可以通过在页面头部加入header-img属性来添加头图,所以在jekyll中，page代表当前页面，页面的域var在最开头进行了定义，下面用两个花括号进行引用。
+
+2.让表格自动换行，不然会超出页面
+
+在github-markdown.css里面的.markdown-body table {加上
+```
+table-layout:fixed;
+word-break:break-all;
+word-wrap:break-word;
+border-collapse:collapse;
+margin:0;
+padding:0;
+```
+`overflow:scroll`不知道为什么不生效。
 
 ## 优化
 1. 哦不是，纯粹是网不好加载不出来，但文章中的好像会反复尝试加载，但是头图不会，那就把头图插到文章里吧，希望能促进头图的显示

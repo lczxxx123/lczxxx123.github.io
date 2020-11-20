@@ -265,6 +265,12 @@
   border-spacing: 0;
   border-collapse: collapse;
   overflow: auto;
+  table-layout:fixed;
+  word-break:break-all;
+  word-wrap:break-word;
+  border-collapse:collapse;
+  margin:0;
+  padding:0;
 }
 
 .markdown-body td,
