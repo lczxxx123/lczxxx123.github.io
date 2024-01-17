@@ -1,0 +1,38 @@
+name: Get Doc Name List and Commit to Repository
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'doc/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: use python
+        uses: actions/setup-python@v4
+
+      - name: find doc names
+        run: |
+          cd doc
+          echo "===↓ docs==="
+          # chmod +x doc.sh
+          # bash doc.sh
+          python doc.py
+          cat docnames.txt
+          git config --global user.name "doclistaction"
+          git config --global user.email "doclistaction@github.com"
+          git pull
+          git add -A
+          echo "===GIT STATUS==="
+          git status
+          git commit -m "auto action:get doc list"
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}

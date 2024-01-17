@@ -1,0 +1,28 @@
+body {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+.time {
+  font-weight: bold;
+}
+.blink {
+  animation: blink 1s ease-in-out infinite alternate;
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.date {
+  color: darkgrey;
+  font-weight: bold;
+  font-size: 0.4em;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em;
+}

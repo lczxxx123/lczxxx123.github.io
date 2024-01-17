@@ -1,0 +1,41 @@
+name: Get Images Name List and Commit to Repository
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'images/**/*.jpg'
+      - 'images/**/*.png'
+      - 'images/**/*.webp'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Find image names
+        run: |
+          cd images
+          echo "===↓ images==="
+          ls -lh
+
+          file_names=$(find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.webp" \) -exec basename {} \;)
+          echo "===↓ file_names==="
+          echo $file_names
+          echo -n "$file_names" > imnames.txt
+          echo "===↓ check files==="
+          cat imnames.txt
+
+          git config --global user.name "imageslistaction"
+          git config --global user.email "imageslistaction@github.com"
+          git pull
+          git add -A
+          echo "===GIT STATUS==="
+          git status
+          git commit -m "auto action:get images list"
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}

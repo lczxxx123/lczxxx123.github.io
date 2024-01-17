@@ -1,0 +1,228 @@
+:root {
+  --main-max-width: 800px;
+  --bg-color: #fbfefd;
+}
+html {
+  /* background-image: url("/images/sea.jpg"); */
+  background-image: url(https://api.oneneko.com/v1/bing_today);
+  background-color: #000;
+  background-size: 1920px 1080px;
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  transition: background-image 2s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-bottom: 70px;
+  /* background-color: var(--bg-color); */
+}
+
+header {
+  /* background: var(--bg-color); */
+  color: #edf2ef;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.player {
+  margin-bottom: 80px;
+}
+
+.player {
+  max-width: var(--main-max-width);
+  margin: 20px auto 0;
+  padding: 2px;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.player .playerbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player .playerbutton button {
+  background-color: #2d2d2d;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  display: inline-block;
+  line-height: 1;
+}
+.player .playerbutton button:hover {
+  background-color: #fff;
+  color: #2d2d2d;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-1-back {
+  position: relative;
+  width: 160px;
+  height: 45px;
+  background: rgba(15, 45, 45);
+  border-radius: 45px;
+}
+.btn-1 {
+  position: relative;
+  width: calc(100% - 40px);
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+  padding-left: 40px;
+  transition: 0.5s;
+  overflow: hidden;
+  font-family: "Songti TC";
+  font-size: 20px;
+}
+.btn-1 p {
+  margin-top: 15px;
+}
+.btn-1:hover {
+  padding-left: 0px;
+  padding-right: 40px;
+  color: rgba(255, 255, 255, 1);
+}
+.btn-1 span {
+  position: absolute;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  background: wheat;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 35px; /* 字体大小 */
+}
+.btn-1 span p {
+  margin-top: 80%;
+}
+.btn-1:hover span {
+  left: calc(100% - 40px);
+}
+.btn-1:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-150px) skewX(30deg);
+  transition: 0.75s ease-in-out;
+}
+.btn-1:hover:after {
+  transform: translateX(150px) skewX(30deg);
+}
+.btn-1:active {
+  font-size: 30px;
+}
+
+.btn2 {
+  color: #009688;
+  background: #fff;
+  border: 1px solid #009688;
+  font-size: 17px;
+  padding: 7px 12px;
+  font-weight: normal;
+  margin: 6px 0;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  min-width: 120px;
+}
+.btn2:hover,
+.btn2:active {
+  color: #fff;
+  background: #009688;
+  font-size: 18px;
+}
+
+.button-container {
+  max-width: var(--main-max-width);
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+}
+.ssn {
+  max-width: var(--main-max-width);
+  margin: 20px auto 0;
+  padding: 5px;
+  /* background-color: #f2f7ef; */
+  background-color: rgba(242, 247, 239, 0.85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+}
+.clockb {
+  max-width: var(--main-max-width);
+  margin: 20px auto 0;
+  border: none;
+  /* padding: 20px;
+    background-color: #fff; */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  display: block;
+  width: 250px;
+  height: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ssn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

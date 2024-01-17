@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prompt Page</title>
+      </head>
+    <body>
+        <div id="myDiv"></div>
+
+        <script>
+          const code = `const prompt = \`\${userInput.value},请根据需求提供兼容5.2.1版本的ECharts options 符合格式的JSON字符串,回复json格式如下:{
+            title: {
+              left: 'center'
+            },
+            tooltip: {
+            },
+            legend: {
+              orient: 'vertical',
+              left: 'left'
+            },
+            series: [],
+            ...
+          }\``;
+          
+          document.getElementById("myDiv").innerHTML = "<pre><code>" + code + "</code></pre>";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>💫太苦了🌟</title>
+    <link rel="stylesheet" href="/css/APlayer.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="shortcut icon" href="/icons/happy.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="pragma" content="no-store" />
+    <meta http-equiv="content-type" content="no-store, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+    <main>
+      <iframe class="clockb" src="clock.html"></iframe>
+      <div class="player">
+        <script src="/js/APlayer.min.js"></script>
+        <script src="/js/Meting.min.js"></script>
+        <meting-js
+          id="3141023413"
+          lrc-type="0"
+          server="netease"
+          order="random"
+          type="playlist"
+          fixed="false"
+          list-folded="true"
+          autoplay="true"
+          loop="all"
+          volume="0.9"
+          mutex="false"
+          order="random"
+          list-max-height="200px"
+        >
+        </meting-js>
+        <div id="meting_js"></div>
+        <!--   临时修复 https://github.com/metowolf/MetingJS/issues/84 -->
+        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+        <script>
+          playlist_id = "3141023413";
+          window.meting_api =
+            "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+          document.getElementById(
+            "meting_js"
+          ).innerHTML = `<meting-js server="netease" type="playlist" id="${playlist_id}" autoplay="false" order="random" list-folded="true"></meting-js>`;
+        </script>
+        <div class="playerbutton">
+          <button id="playplay">></button>
+          <button id="playnext">→</button>
+          <button id="playpause">||</button>
+          <button id="list">↑</button>
+          <script src="/js/indexplayer.js"></script>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <!-- <button class="btn1" id="backbutton">切换背景</button> -->
+        <button class="btn2" onclick="window.open('http:\/\/www.las.cas.cn/yjsjy/xjyrc/xxyyq/201404/t20140401_4084402.html', '_blank')">
+          读博实用技巧
+        </button>
+        <div class="btn-1-back">
+          <a href="javascript:void(0)" class="btn-1" id="backbutton" onclick="changeBackground()">
+            <p>切换背景</p>
+            <span><p>➭</p></span></a
+          >
+        </div>
+        <script src="/js/indexback.js"></script>
+      </div>
+
+      <div id="waterfall-ssn"></div>
+      <script src="/js/ssn.js"></script>
+    </main>
+    <script src="/js/daorumuban.js"></script>
+  </body>
+</html>

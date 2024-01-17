@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>😊😍🤩🥳🤗😜😝😛😋🤤🥰😘😚😙😗</title>
+    <link rel="shortcut icon" href="/icons/sad.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/ht.css" />
+  </head>
+  <body>
+    <h2>後臺</h2>
+    <div class="result">
+      <span
+        ><a href="http://zhoujielun.soullink.buzz" target="_blank">vps1</a>
+        <span id="zhoujielun"></span></span
+      ><br />
+      <iframe
+        src="http://zhoujielun.soullink.buzz/HOUTAI.html?random=<%=new Date().getTime()%>"
+      ></iframe
+      ><br />
+      <span
+        ><a href="http://linjunjie.soullink.buzz" target="_blank">vps2</a
+        ><span id="linjunjie"></span></span
+      ><br />
+      <iframe
+        src="http://linjunjie.soullink.buzz/HOUTAI.html?random=<%=new Date().getTime()%>"
+      ></iframe
+      ><br />
+      <span
+        ><a href="http://chenyixun.soullink.buzz" target="_blank">vps3</a
+        ><span id="chenyixun"></span></span
+      ><br />
+      <iframe
+        src="http://chenyixun.soullink.buzz/HOUTAI.html?random=<%=new Date().getTime()%>"
+      ></iframe
+      ><br />
+    </div>
+    <div class="content">
+      <li>
+        <a
+          href="https://mp.weixin.qq.com/s/v1XwVclH6_m1EzDbj2k3_w"
+          target="_blank"
+          rel="noopener noreferrer"
+          >doi: 10.1038/d41586-023-00821-8</a
+        >
+      </li>
+    </div>
+    <div id="html-container"></div>
+    <script>
+      fetch("/latest_commit.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const htmlContainer = document.getElementById("html-container");
+          htmlContainer.innerHTML = data;
+        })
+        .catch((error) => console.error(error));
+    </script>
+  </body>
+</html>

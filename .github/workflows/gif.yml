@@ -1,0 +1,74 @@
+name: Merge Images into GIF and Commit to Repository
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'images/**/*.jpg'
+      - 'images/**/*.png'
+      - 'images/**/*.webp'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check username
+        run: |
+          echo "Warning: index改了,再也不用这个gif action了"
+          exit 1
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install imagemagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick 
+          sudo apt-get install -y gifsicle
+
+      - name: Merge Images into GIF
+        run: |
+          cd images
+          echo "2123"
+          ls -lh
+          echo "100 == 1ms"
+          files=()
+          if [ "$(ls *.jpg 2>/dev/null)" ]; then
+              files+=(*.jpg)
+          fi
+          if [ "$(ls *.png 2>/dev/null)" ]; then
+              files+=(*.png)
+          fi
+          if [ "$(ls *.webp 2>/dev/null)" ]; then
+              files+=(*.webp)
+          fi
+          echo ${files[@]}
+          convert -delay 1500 -dispose none -loop 0 -background white -gravity center -resize 2778x2778^ -gravity center -extent 2778x2778 ${files[@]} bgg.gif
+          ls -lh
+          echo "21244443"
+          if [ $(stat -c%s "bgg.gif") -gt 10000000 ]; then
+            echo "10M10M10M10M10M-1   resize 2048x2048"
+            convert -delay 1500 -dispose none -loop 0 -background white -gravity center -resize 2048x2048^ -gravity center -extent 2048x2048 ${files[@]} bgg.gif
+          fi
+          ls -lh
+          echo "2122462523   gifsicle --dither --colors 256 -O3 bgg.gif -o bggg.gif"
+          if [ $(stat -c%s "bgg.gif") -gt 10000000 ]; then
+            echo "10M10M10M10M10M-2"
+            gifsicle --dither --colors 256 -O3 bgg.gif -o bggg.gif
+            mv bggg.gif bgg.gif
+          fi
+          
+          gif_size=$(printf "%.4f" "$(echo "$(stat -c%s bgg.gif) / 1024 / 1024" | bc -l)")
+          echo "GIF 文件大小为：${gif_size} MB"
+          ls -lh
+          git config --global user.name "gifaction"
+          git config --global user.email "gifaction@github.com"
+          ls -lh bgg.gif
+          git pull
+          git add bgg.gif
+          echo "GIT STATUS:"
+          git status
+          git commit -m "auto action:(${gif_size} MB) Merge all jpg images into a gif file"
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}

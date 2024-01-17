@@ -1,0 +1,45 @@
+name: Update latest commit info
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'images/**/*.jpg'
+      - 'images/**/*.png'
+      - 'images/**/*.webp'      
+      - 'docs/**/*.md'
+
+jobs:
+  update_commit_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check username
+        if: "contains(github.actor, 'timeaction')"
+        run: |
+          echo "Warning: Push by GitHub Actions, skip build"
+          exit 1
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get latest commit info
+        run: |
+          ls -lh
+          AUTHOR=$(git log -1 --pretty=format:%an)
+          # DATE=$(git log -1 --pretty=format:%cd --date=local)
+          DATE=$(TZ='Asia/Shanghai' git log -1 --pretty=format:%cd --date='format:%Y-%m-%d %H:%M:%S')
+          echo "<html><body><p>Latest commit: $AUTHOR  $DATE</p></body></html>" > latest_commit.html
+          git config --global user.name "timeaction"
+          git config --global user.email "timeaction@github.com"
+          git add latest_commit.html
+          echo "fasdf"
+          git status
+          echo "fasdf"
+          git commit -m "auto action: time : $DATE $AUTHOR"
+
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
