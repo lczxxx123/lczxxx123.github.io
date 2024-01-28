@@ -57,3 +57,35 @@ document.getElementById("backbutton").addEventListener("click", async () => {
     changeBackground();
   }
 });
+
+
+const playButton1 = document.getElementById("playButton1");
+const playButton2 = document.getElementById("playButton2");
+const videoModal1 = document.getElementById("videoModal1");
+const videoPlayer1 = document.getElementById("videoPlayer1");
+const videoModal2 = document.getElementById("videoModal2");
+const videoPlayer2 = document.getElementById("videoPlayer2");
+const overlay1 = document.getElementById("overlay1");
+const overlay2 = document.getElementById("overlay2");
+
+playButton1.addEventListener("click", () => {
+  videoModal1.style.display = "flex";
+  videoPlayer1.play();
+});
+
+playButton2.addEventListener("click", () => {
+    videoModal2.style.display = "flex";
+    videoPlayer2.play();
+  });
+  
+
+overlay1.addEventListener("click", () => {
+  videoPlayer1.pause();
+  videoModal1.style.display = "none";
+});
+
+overlay2.addEventListener("click", () => {
+    videoPlayer2.pause();
+    videoModal2.style.display = "none";
+  });
+  

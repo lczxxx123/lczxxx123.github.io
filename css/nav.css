@@ -3,7 +3,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background: linear-gradient(to right,rgba(252, 128, 0, 0.2), rgba(255, 252, 0, 0.2));
 }
 
 nav ul {
