@@ -14,9 +14,7 @@
 </head>
 
 <body>
-  <header>
-    <h1></h1>
-  </header>
+
   <main>
     <iframe class="clockb" src="clock.html"></iframe>
     <div class="player">
@@ -36,53 +34,57 @@
     </div>
 
     <div class="button-container">
-      <!-- <button class="btn1" id="backbutton">切换背景</button> -->
-      <button class="btn2"
-        onclick="window.open('http:\/\/yjsb.ciac.cas.cn/xjgl/xzzq_43498/202312/t20231201_765114.html', '_blank')">
-        读博实用技巧
-      </button>
 
-      <button class="btn2" onclick="window.open('https:\/\/framist.github.io/safc/', '_blank')">
-        SAFC
-      </button>
-
-      <div class="btn-1-back">
-        <a href="javascript:void(0)" class="btn-1" id="backbutton" onclick="changeBackground()">
-          <p>切换背景</p>
-          <span>
-            <p>➭</p>
-          </span>
-        </a>
+      <div class="row">
+        <button class="btn2"
+          onclick="window.open('http:\/\/yjsb.ciac.cas.cn/xjgl/xzzq_43498/202312/t20231201_765114.html', '_blank')">
+          读博
+        </button>
+        <button class="btn2" onclick="window.open('https:\/\/framist.github.io/safc/', '_blank')">
+          SAFC
+        </button>
+        <button class="btn2" id="playButton1">CP</button>
+        <button class="btn2" id="playButton2">劝学</button>
+        <div class="videoModal" id="videoModal1">
+          <div class="videoContainer" id="videoContainer1">
+            <video class="videoPlayer" id="videoPlayer1" controls="controls">
+              <source src="https://raw.githubusercontent.com/lczxxx123/lczxxx123.github.io/main/dx/cp.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="videoOverlay" id="overlay1"></div>
+        </div>
+        <div class="videoModal" id="videoModal2">
+          <div class="videoContainer" id="videoContainer2">
+            <video class="videoPlayer" id="videoPlayer2" controls="controls">
+              <source src="https://raw.githubusercontent.com/lczxxx123/lczxxx123.github.io/main/dx/quanxue.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="videoOverlay" id="overlay2"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="btn-1-back">
+          <a href="javascript:void(0)" class="btn-1" id="backbutton" onclick="changeBackground()">
+            <p>切换背景</p>
+            <span>
+              <p>➭</p>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
-    
-    <div class="button-container">
-      <button class="btn2" id="playButton1">播放视频1</button>
-      <button class="btn2" id="playButton2">播放视频2</button>
-      <div class="videoModal" id="videoModal1">
-        <div class="videoContainer" id="videoContainer1">
-          <video class="videoPlayer" id="videoPlayer1" controls="controls">
-            <source src="https://raw.githubusercontent.com/lczxxx123/lczxxx123.github.io/main/dx/cp.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="videoOverlay" id="overlay1"></div>
-      </div>
-      <div class="videoModal" id="videoModal2">
-        <div class="videoContainer" id="videoContainer2">
-          <video class="videoPlayer" id="videoPlayer2" controls="controls">
-            <source src="https://raw.githubusercontent.com/lczxxx123/lczxxx123.github.io/main/dx/quanxue.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="videoOverlay" id="overlay2"></div>
-      </div>
-      
-      <script src="/js/indexback.js"></script>
 
-    </div>
 
+    <script src="/js/indexback.js"></script>
     <div id="waterfall-ssn"></div>
     <script src="/js/ssn.js"></script>
   </main>
+  <div class="clustrmap" id="clustrmap">
+    <a href='https://clustrmaps.com/site/1byfh' title='Visit tracker'><img
+        src='//clustrmaps.com/map_v2.png?cl=6c1ff2&w=a&t=tt&d=6BF4PSiBEKK3OZMxuOPmXfRE0ko6FofJ2Uc8O1r7PSM&co=55d3ed' /></a>
+  </div>
   <script src="/js/daorumuban.js"></script>
 </body>
 

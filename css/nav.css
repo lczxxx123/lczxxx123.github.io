@@ -3,8 +3,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  background: linear-gradient(to right,rgba(252, 128, 0, 0.2), rgba(255, 252, 0, 0.2));
+  background: linear-gradient(to right,rgba(252, 128, 0, 0.1), rgba(255, 252, 0, 0.1));
 }
 
 nav ul {
@@ -30,7 +29,7 @@ nav ul li a {
 nav ul li:hover a::after {
   content: "";
   display: block;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;

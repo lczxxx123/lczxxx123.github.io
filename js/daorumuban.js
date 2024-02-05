@@ -17,20 +17,22 @@ fetch("/html/nav.html")
     navdivElement.innerHTML = data;
   });
 
-var footerdivElement = document.createElement("div");
-footerdivElement.id = "footerdiv";
-footerdivElement.className = "footerdivclass";
+if (false) {
+  var footerdivElement = document.createElement("div");
+  footerdivElement.id = "footerdiv";
+  footerdivElement.className = "footerdivclass";
 
-// 获取 body 元素
-var bodyElement = document.body;
+  // 获取 body 元素
+  var bodyElement = document.body;
 
-// 将 <div> 元素添加到 body 元素的最后一个子元素之后
-bodyElement.insertBefore(footerdivElement, bodyElement.lastElementChild);
+  // 将 <div> 元素添加到 body 元素的最后一个子元素之后
+  bodyElement.insertBefore(footerdivElement, bodyElement.lastElementChild);
 
-// 使用 fetch 获取导航栏内容
-fetch("/html/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    // 将导航栏内容设置为 <div> 的内容
-    footerdivElement.innerHTML = data;
-  });
+  // 使用 fetch 获取导航栏内容
+  fetch("/html/footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      // 将导航栏内容设置为 <div> 的内容
+      footerdivElement.innerHTML = data;
+    });
+}
