@@ -1,0 +1,77 @@
+:root {
+    --main-max-width: 667px;
+    --footer-max-width: 667px;
+    --bg-color: #fbfefd;
+}
+
+html {
+    /* background-image: url("/images/sea.jpg"); */
+    background-image: url(/images/mountain.jpg);
+    background-color: #000;
+    background-size: 1920px 1080px;
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    transition: background-image 2s;
+    height: 100%;
+}
+
+body{
+    height: 93.5%;
+    margin:0;
+}
+
+.mainblock {
+    max-width: var(--main-max-width);
+    margin: 30px auto 0px auto;
+    /* padding: 5px; */
+    /* background-color: #f2f7ef; */
+    background-color: rgba(255, 255, 255, 0.99);
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 3px; */
+    /* text-align: center; */
+    color: #333;
+    width: 100%;
+    height: 100%;
+  }
+
+
+footer {
+    background: rgb(250,250,250);
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer > .footer-button-container {
+    display: flex;
+    max-width: var(--footer-max-width);
+    margin: auto;
+    justify-content: center; /* 添加的属性 */
+}
+
+footer > .footer-button-container > button{
+    border: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgb(250,250,250);
+}
+footer > .footer-button-container > button > img{
+    width: 40px; /* 设置宽度 */
+    height: 40px; /* 设置高度 */
+}
+footer > .footer-button-container > .active-button > img{
+    background-color: rgba(255, 221, 221, 0.562);
+    border-radius: 50%;
+}
+
+/* footer > .footer-button-container > .unactive-button {
+    background: rgb(250,250,250);
+} */
